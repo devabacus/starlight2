@@ -1,0 +1,87 @@
+# starlight2-manifests.yaml
+
+# --- 1. Deployment: Запуск контейнера Nginx/Astro ---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starlight2-deployment  # ✅ УНИКАЛЬНОЕ ИМЯ
+  labels:
+    app: starlight2-web
+spec:
+  replicas: 2 # Две копии для отказоустойчивости
+  selector:
+    matchLabels:
+      app: starlight2-web
+  template:
+    metadata:
+      labels:
+        app: starlight2-web
+    spec:
+      # Используем секрет для доступа к приватному реестру Timeweb
+      imagePullSecrets:
+      - name: timeweb-registry-secret 
+      containers:
+      - name: starlight2-nginx
+        # ПОЛНЫЙ ПУТЬ К ВАШЕМУ ОБРАЗУ
+        image: 12cbd00d-reasonable-corvus.registry.twcstorage.ru/starlight2:latest  # ✅ УНИКАЛЬНОЕ ИМЯ ОБРАЗА
+        imagePullPolicy: Always  # ✅ ВАЖНО: всегда скачивать новый образ
+        
+        resources:
+          limits:
+            memory: "64Mi" 
+            cpu: "50m" 
+        
+        ports:
+        - containerPort: 80 # Nginx порт
+        
+        # Проверки, которые подтверждают, что контейнер запущен и готов
+        readinessProbe:
+          httpGet:
+            path: / 
+            port: 80
+          initialDelaySeconds: 5 
+          periodSeconds: 10     
+---
+# --- 2. Service: Внутренний доступ ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: starlight2-service  # ✅ УНИКАЛЬНОЕ ИМЯ
+spec:
+  selector:
+    app: starlight2-web
+  ports:
+    # Имя 'web' для согласованности с Ingress
+    - name: web 
+      protocol: TCP
+      port: 80 
+      targetPort: 80 
+  type: ClusterIP
+---
+# --- 3. Ingress: Внешний доступ через HTTPS ---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: starlight2-ingress  # ✅ УНИКАЛЬНОЕ ИМЯ
+  annotations:
+    # Аннотации для NGINX Ingress и cert-manager
+    kubernetes.io/ingress.class: "nginx" 
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+  labels:
+    app: starlight2-web
+spec:
+  tls:
+  - hosts:
+    - test.mrfrolk.com  # ✅ ВАШ ДОМЕН
+    secretName: starlight2-tls  # ✅ УНИКАЛЬНОЕ ИМЯ СЕКРЕТА
+  rules:
+  - host: "test.mrfrolk.com"  # ✅ ВАШ ДОМЕН
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: starlight2-service
+            port:
+              name: web # Именованный порт из Service
