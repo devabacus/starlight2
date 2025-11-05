@@ -18,30 +18,37 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Auth',
+					collapsed: true,
 					autogenerate: { directory: 'auth' },
 				},
 				{
 					label: 'Creative-tools',
+					collapsed: true,
 					autogenerate: { directory: 'creative-tools' },
 				},
 				{
 					label: 'Devops',
+					collapsed: true,
 					autogenerate: { directory: 'devops' },
 				},
 				{
 					label: 'Flutter',
+					collapsed: true,
 					autogenerate: { directory: 'flutter' },
 				},
 				{
 					label: 'Frameworks',
+					collapsed: true,
 					autogenerate: { directory: 'frameworks' },
 				},
 				{
 					label: 'MCU-dev',
+					collapsed: true,
 					autogenerate: { directory: 'mcu-dev' },
 				},
 				{
 					label: 'NextCloud',
+					collapsed: true,
 					autogenerate: { directory: 'nextCloud' },
 				},							
 
