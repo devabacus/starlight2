@@ -7,53 +7,78 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: '№1 в Уфе. Пожертвовал детям 700 000руб. ',
-			
-	// 		logo: {
-    //     src: './src/assets/mylogo.jpg',
-    //     replacesTitle: false, // false - оставит название рядом с фото
-    //   },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			
+			head: [
+        {
+          tag: 'script',
+          attrs: {
+            // Скрипт встраивается внутри тега
+          },
+          content: `
+            document.addEventListener('astro:page-load', () => {
+              const activeLink = document.querySelector('.sidebar-content [aria-current="page"]');
+              if (activeLink) {
+                const details = activeLink.closest('details');
+                if (details) details.open = true;
+              }
+            });
+          `,
+        },
+      ],
 
 			sidebar: [
 				{
 					label: 'Auth',
 					collapsed: true,
-					autogenerate: { directory: 'auth' },
+					autogenerate: {
+						directory: 'auth',
+					},
 				},
 				{
 					label: 'Creative-tools',
 					collapsed: true,
-					autogenerate: { directory: 'creative-tools' },
+					autogenerate: {
+						directory: 'creative-tools',
+					},
 				},
 				{
 					label: 'Devops',
 					collapsed: true,
-					autogenerate: { directory: 'devops' },
+					autogenerate: {
+						directory: 'devops',
+					},
 				},
 				{
 					label: 'Flutter',
 					collapsed: true,
-					autogenerate: { directory: 'flutter' },
+					autogenerate: {
+						directory: 'flutter',
+					},
 				},
 				{
 					label: 'Frameworks',
 					collapsed: true,
-					autogenerate: { directory: 'frameworks' },
+					autogenerate: {
+						directory: 'frameworks',
+					},
 				},
 				{
 					label: 'MCU-dev',
 					collapsed: true,
-					autogenerate: { directory: 'mcu-dev' },
+					autogenerate: {
+						directory: 'mcu-dev',
+					},
 				},
 				{
 					label: 'NextCloud',
 					collapsed: true,
-					autogenerate: { directory: 'nextCloud' },
-				},							
+					autogenerate: {
+						directory: 'nextCloud',
+					},
+				},
 
 			],
-			
+
 		}),
 	],
 });

@@ -1,0 +1,9 @@
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const activeLink = document.querySelector('.sidebar-content [aria-current="page"]');
+    if (activeLink) {
+      const details = activeLink.closest('details');
+      if (details) details.open = true;
+    }
+  });
+</script>
