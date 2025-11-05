@@ -8,24 +8,40 @@ export default defineConfig({
 		starlight({
 			title: 'My Docs',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+		
+
 			sidebar: [
 				{
-					label: 'Guides',
-					// items: [
-					// 	// Each item here is one entry in the navigation menu.
-					// 	{ label: 'Example Guide', slug: 'guides/example' },
-					// ],
-					autogenerate: {directory: 'guides'}
+					label: 'Auth',
+					autogenerate: { directory: 'auth' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Creative-tools',
+					autogenerate: { directory: 'creative-tools' },
 				},
 				{
-					label: 'Projects',
-					autogenerate: { directory: 'projects' },
+					label: 'Devops',
+					autogenerate: { directory: 'devops' },
 				},
+				{
+					label: 'Flutter',
+					autogenerate: { directory: 'flutter' },
+				},
+				{
+					label: 'Frameworks',
+					autogenerate: { directory: 'frameworks' },
+				},
+				{
+					label: 'MCU-dev',
+					autogenerate: { directory: 'mcu-dev' },
+				},
+				{
+					label: 'NextCloud',
+					autogenerate: { directory: 'nextCloud' },
+				},							
+
 			],
+			
 		}),
 	],
 });

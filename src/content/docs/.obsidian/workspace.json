@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "97b80c913a7ccc8d",
+    "type": "split",
+    "children": [
+      {
+        "id": "be5d77ebc9227c8f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ea8b930872a33ff",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2a4bc8e2d634326a",
+    "type": "split",
+    "children": [
+      {
+        "id": "05d4f03781d5637a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "931b727a3cd3adcb",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6e7b274450f2c71a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "4ef0b76c41831969",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5a2c30f750c77d9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6f18a41517792258",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4320de9d830c983f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "560a9a3b355722a7",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "d7f7ae7d0ecbd831",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "87a17d2d15488a0b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "931b727a3cd3adcb",
+  "lastOpenFiles": [
+    "frameworks/frappe/erpNext/getting-started.md",
+    "frameworks/frappe/erpNext",
+    "frameworks/frappe/getting-started.md",
+    "frameworks/frappe",
+    "frameworks/erpNext/getting-started.md",
+    "frameworks/erpNext",
+    "frameworks",
+    "erp-systems/erpNext/getting-started.md",
+    "erp-systems/erpNext",
+    "erp-systems/getting-started.md",
+    "erp-systems",
+    "devops/timeweb-cloud/getting-started.md",
+    "devops/linux/getting-started.md",
+    "devops/kubernetes/getting-started.md",
+    "devops/docker/getting-started.md",
+    "nextCloud/getting-started.md",
+    "nextCloud",
+    "devops/linux",
+    "devops/timeweb-cloud",
+    "devops/docker",
+    "auth/zitadel/getting-started.md",
+    "erpNext/getting-started.md",
+    "erpNext/serverpod.md",
+    "web-development/astro/deploy.md",
+    "web-development/wordpress/deploy.md",
+    "creative-tools/inkscape/getting-started.md",
+    "creative-tools/gimp/getting-started.md",
+    "creative-tools/davinci-resolve/getting-started.md",
+    "flutter/serverpod/serverpod.md",
+    "flutter/serverpod/getting-started.md",
+    "mcu-dev/nrf/getting-started.md",
+    "mcu-dev/esp32/getting-started.md",
+    "mcu-dev/esp32/Deploy.md",
+    "web-development/wordpress/Deploy.md",
+    "web-development/astro/Deploy.md",
+    "web_development/wordpress/Deploy.md"
+  ]
+}
