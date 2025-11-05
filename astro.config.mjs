@@ -6,8 +6,8 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: '№1 в Уфе. Пожертвовал детям 700 000руб. ',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'База знаний - MrFrolk',
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/devabacus/' }, { icon: 'telegram', label: 'Telegram', href: 'https://t.me/mrfrolk' }],
 			head: [
         // {
         //   tag: 'script',
