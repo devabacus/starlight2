@@ -9,21 +9,21 @@ export default defineConfig({
 			title: '№1 в Уфе. Пожертвовал детям 700 000руб. ',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			head: [
-        {
-          tag: 'script',
-          attrs: {
-            // Скрипт встраивается внутри тега
-          },
-          content: `
-            document.addEventListener('astro:page-load', () => {
-              const activeLink = document.querySelector('.sidebar-content [aria-current="page"]');
-              if (activeLink) {
-                const details = activeLink.closest('details');
-                if (details) details.open = true;
-              }
-            });
-          `,
-        },
+        // {
+        //   tag: 'script',
+        //   attrs: {
+        //     // Скрипт встраивается внутри тега
+        //   },
+        //   content: `
+        //     document.addEventListener('astro:page-load', () => {
+        //       const activeLink = document.querySelector('.sidebar-content [aria-current="page"]');
+        //       if (activeLink) {
+        //         const details = activeLink.closest('details');
+        //         if (details) details.open = true;
+        //       }
+        //     });
+        //   `,
+        // },
       ],
 
 			sidebar: [
