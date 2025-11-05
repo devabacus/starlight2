@@ -6,9 +6,14 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '№1 в Уфе. Пожертвовал детям 700 000руб. ',
+			
+	// 		logo: {
+    //     src: './src/assets/mylogo.jpg',
+    //     replacesTitle: false, // false - оставит название рядом с фото
+    //   },
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-		
+			
 
 			sidebar: [
 				{
